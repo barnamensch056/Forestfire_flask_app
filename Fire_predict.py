@@ -4,7 +4,7 @@ import numpy as np
 app=Flask(__name__)
 fire_pickle=pickle.load(open('fire_pickle.pkl','rb'))
 
-@app.route("/")
+@app.route('/')
 def home():
     return render_template('onfire.html')
 
@@ -16,10 +16,10 @@ def predict():
     print(charac2)
     prediction=fire_pickle.predict_proba(charac2)
     output='{0:.{1}f}'.format(prediction[0][1], 2)
-
-    if output==0.00:
-        return render_template('onfire.html',pred_text='Fire will not occur,forest is marked safe')
-    elif output==1.00:
+    print(output,type(output))
+    if output<='0.5':
+        return render_template('onfire.html',pred_text='Fire will not occur,forest is marked safe ')
+    elif output>='0.5':
         return render_template('onfire.html',pred_text='The forest will be on fire,Run!!')
     else:
         return render_template('onfire.html',pred_text='Jangal pe mangal not allowed')
