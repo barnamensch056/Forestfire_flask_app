@@ -15,7 +15,8 @@ def predict():
     print(characters1)
     print(charac2)
     prediction=fire_pickle.predict_proba(charac2)
-    output='{0:.{1}f}'.format(prediction[0][1], 2)
+    print(prediction)
+    output='{0:.{1}f}'.format(prediction[0][1], 1)
     print(output,type(output))
     if output<='0.5':
         return render_template('onfire.html',pred_text='Fire will not occur,forest is marked safe ')
