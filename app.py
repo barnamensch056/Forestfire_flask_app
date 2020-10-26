@@ -1,7 +1,7 @@
 from flask import Flask,request,jsonify,render_template,url_for
 import pickle
 import numpy as np
-app=Flask(__name__)
+app=Flask(__name__,template_folder='template')
 fire_pickle=pickle.load(open('fire_pickle.pkl','rb'))
 
 @app.route('/')
