@@ -16,10 +16,57 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
     integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
     crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/fb55b35c3b.js" crossorigin="anonymous"></script>
   
 </head>
+<style>
+ html,body{
+   height: 40%;
+ } 
+  #main-footer {
+      position:absolute;
+      bottom:0;
+      background:#C19434 ;
+      color: #ffffff;
+      width: 100%;
+      height: 5rem;
+  }
+  
+  #main-footer .footer-content {
+      bottom:0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      height: 5rem;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+  }
+  
+  #main-footer .footer-content .social .fab {
+      /* margin-right: 1rem; */
+      border: 2px #ffffff solid;
+      border-radius: 50%;
+      height: 43px;
+      width: 45px;
+      line-height: 33px;
+      text-align: center;
+      padding: 0.2rem;
+  }
+  
+  #main-footer .footer-content .social .fab:hover {
+      background-color:#C19434;
+  }
+  
+  #main-footer .footer-content .social a {
+      color: #fff;
+  }
 
-<body>
+</style>
+<body style="background-image: url('../static/F_image.jpg');background-repeat: no-repeat;background-size:100% 225%;>
   <header class="site-header">
     <nav class="navbar navbar-expand-md navbar-light bg-green " style="background-color: #34421E;">
       <div class="container-fluid">
@@ -73,6 +120,16 @@
         </div>
 
   </main>
+ <footer id="main-footer">
+    <div class="footer-content container">
+        <p>Copyright &copy; XYZ. All Rights Reserved, 2020- Present</p>
+        <div class="social">
+            <a href="https://github.com/barnamensch056"><i class="fab fa-github fa-2x"></i></a>
+            <a href="linkedin.com/in/barnadip-dey-a03121198 "><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://www.instagram.com/barnadipdey/"><i class="fab fa-instagram fa-2x"></i></a>
+        </div>
+    </div>
+</footer>
 </body>
 
 </html>
